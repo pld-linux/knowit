@@ -1,0 +1,15 @@
+--- knowit-0.10beta3/knowit/knowit.desktop~	Tue Jul 20 17:03:09 2004
++++ knowit-0.10beta3/knowit/knowit.desktop	Tue Jul 20 17:03:48 2004
+@@ -6,8 +6,9 @@
+ MimeType=application/x-knowit
+ Icon=knowit.png
+ DocPath=knowit/index.html
+-Comment=
+-Comment[de]=
+-Terminal=0
++Comment=A tool for managing notes
++Comment[pl]=Narzędzie do zarządzania notatkami
++Terminal=false
+ Name=KnowIt
+ Name[de]=KnowIt
++# vi: encoding=utf-8
