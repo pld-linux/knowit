@@ -15,7 +15,7 @@ URL:		http://knowit.sourceforge.net/
 BuildRequires:	kdelibs-devel >= 3.0
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	rpmbuild(macros) >= 1.129
-Requires:	kdebase-core >= 3.2.0
+Requires:	kdebase-core >= 9:3.2.0
 Requires:	libxslt >= 1.0.19
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
