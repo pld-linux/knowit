@@ -1,5 +1,5 @@
 
-%define		_beta beta2
+%define		_beta beta3
 
 Summary:	KnowIt - a tool for managing notes
 Summary(pl):	KnowIt - narzêdzie do zarz±dzania notatkami
@@ -10,7 +10,7 @@ License:	GPL v2
 Group:		X11/Applications
 %define		_ver	%{version}%{_beta}
 Source0:	http://knowit.sourceforge.net/files/%{name}-%{_ver}.tar.bz2
-# Source0-md5:	47f521c5f1e26560edb11e2a9d668529
+# Source0-md5:	998edb0921fc3b8a1809906f8d530874
 URL:		http://knowit.sourceforge.net/
 BuildRequires:	kdelibs-devel  >= 3.0
 BuildRequires:	libxslt-devel >= 1.0.19
