@@ -1,6 +1,6 @@
 --- knowit-0.10beta3/knowit/knowit.desktop~	Tue Jul 20 17:03:09 2004
 +++ knowit-0.10beta3/knowit/knowit.desktop	Tue Jul 20 17:03:48 2004
-@@ -6,8 +6,9 @@
+@@ -6,8 +6,10 @@
  MimeType=application/x-knowit
  Icon=knowit.png
  DocPath=knowit/index.html
@@ -12,4 +12,5 @@
 +Terminal=false
  Name=KnowIt
  Name[de]=KnowIt
++Categories=Qt;KDE;Office;
 +# vi: encoding=utf-8
