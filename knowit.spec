@@ -12,7 +12,7 @@ Source0:	http://knowit.sourceforge.net/files/%{name}-%{_ver}.tar.bz2
 URL:		http://knowit.sourceforge.net/
 BuildRequires:	kdelibs-devel  >= 3.0
 BuildRequires:	libxslt-devel >= 1.0.19
-BuildRequires:	qt-devel > 3.0 
+BuildRequires:	qt-devel > 3.0
 Requires:	kdebase >= 3.0
 Requires:	libxslt >= 1.0.19
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
