@@ -12,9 +12,9 @@ Group:		X11/Applications
 Source0:	http://knowit.sourceforge.net/files/%{name}-%{_ver}.tar.bz2
 # Source0-md5:	998edb0921fc3b8a1809906f8d530874
 URL:		http://knowit.sourceforge.net/
-BuildRequires:	kdelibs-devel  >= 3.0
+BuildRequires:	kdelibs-devel >= 3.0
 BuildRequires:	libxslt-devel >= 1.0.19
-BuildRequires:  rpmbuild(macros) >= 1.129
+BuildRequires:	rpmbuild(macros) >= 1.129
 Requires:	kdebase-core >= 3.2.0
 Requires:	libxslt >= 1.0.19
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -48,7 +48,7 @@ mv $RPM_BUILD_ROOT%{_desktopdir}/{Applications/,}knowit.desktop
 echo "Categories=Qt;KDE;Utility;" >> \
 	$RPM_BUILD_ROOT%{_desktopdir}/knowit.desktop
 
-%find_lang %{name}  --with-kde
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
