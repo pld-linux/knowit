@@ -1,14 +1,14 @@
-%define		_beta beta1
+%define		_beta beta2
 Summary:	KnowIt - a tool for managing notes
 Summary(pl):	KnowIt - narzêdzie do zarz±dzania notatkami
 Name:		knowit
-Version:	0.9
+Version:	0.10
 Release:	0.%{_beta}.1
 License:	GPL v2
 Group:		X11/Applications
 %define		_ver	%{version}%{_beta}
 Source0:	http://knowit.sourceforge.net/files/%{name}-%{_ver}.tar.bz2
-# Source0-md5:	ade3e11f07c8568e058a3d2b4c511944
+# Source0-md5:	47f521c5f1e26560edb11e2a9d668529
 URL:		http://knowit.sourceforge.net/
 BuildRequires:	kdelibs-devel  >= 3.0
 BuildRequires:	libxslt-devel >= 1.0.19
@@ -29,9 +29,9 @@ KnowIt to rozbudowane narzêdzie do zarz±dzania notatkami.
 %setup -q -n %{name}-%{_ver}
 
 %build
-kde_appsdir="%{_applnkdir}"; export kde_appsdir
+kde_appsdir="%{_desktopdir}"; export kde_appsdir
 kde_htmldir="%{_htmldir}"; export kde_htmldir
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
+kde_icondir="%{_iconsdir}"; export kde_icondir
 %configure --enable-final
 %{__make}
 
@@ -41,8 +41,8 @@ install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Utilities
-mv $RPM_BUILD_ROOT%{_applnkdir}/Applications/knowit.desktop $RPM_BUILD_ROOT%{_applnkdir}/Utilities
+mv $RPM_BUILD_ROOT%{_desktopdir}/{Applications/,}knowit.desktop
+echo "Categories=Qt;KDE;Utility;X-KDE-More"  >> $RPM_BUILD_ROOT%{_desktopdir}/knowit.desktop
 
 %find_lang %{name}  --with-kde
 
@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_pixmapsdir}/*/*/*/*.png
+%{_iconsdir}/*/*/*/*.png
 %{_datadir}/apps/%{name}
-%{_applnkdir}/Utilities/knowit.desktop
+%{_datadir}/mimelnk/application/x-knowit.desktop
+%{_desktopdir}/knowit.desktop
