@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_desktopdir}/{Applications/,}knowit.desktop
 
-echo "Categories=Qt;KDE;Utility; >> \
+echo "Categories=Qt;KDE;Utility;" >> \
 	$RPM_BUILD_ROOT%{_desktopdir}/knowit.desktop
 
 %find_lang %{name}  --with-kde
