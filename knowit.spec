@@ -1,6 +1,6 @@
 %define		_beta beta1
-Summary:	KnowIt is a tool for managing notes.
-Summary(pl):	KnowIt to mi³y mened¿er zadañ.
+Summary:	KnowIt - a tool for managing notes
+Summary(pl):	KnowIt - narzêdzie do zarz±dzania notatkami
 Name:		knowit
 Version:	0.8
 Release:	0.%{_beta}.1
@@ -22,12 +22,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KnowIt is a tool for managing notes.
 
 %description -l pl
-KnowIt to rozbudowane narzêdzie do zarz±dzania zadaniami.
+KnowIt to rozbudowane narzêdzie do zarz±dzania notatkami.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
-%setup -q -n  %{name}-%{_ver}
+%setup -q -n %{name}-%{_ver}
 
 %build
 kde_appsdir="%{_applnkdir}"; export kde_appsdir
@@ -50,7 +48,7 @@ mv $RPM_BUILD_ROOT%{_applnkdir}/Applications/knowit.desktop $RPM_BUILD_ROOT%{_ap
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f knowit.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
