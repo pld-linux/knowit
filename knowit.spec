@@ -13,6 +13,7 @@ Source0:	http://knowit.sourceforge.net/files/%{name}-%{_ver}.tar.bz2
 # Source0-md5:	998edb0921fc3b8a1809906f8d530874
 Patch0:		%{name}-desktop.patch
 URL:		http://knowit.sourceforge.net/
+BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 3.0
 BuildRequires:	libxslt-devel >= 1.0.19
 BuildRequires:	rpmbuild(macros) >= 1.129
