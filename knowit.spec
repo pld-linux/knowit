@@ -2,7 +2,7 @@
 %define		_beta beta3
 
 Summary:	KnowIt - a tool for managing notes
-Summary(pl):	KnowIt - narzêdzie do zarz±dzania notatkami
+Summary(pl.UTF-8):   KnowIt - narzÄ™dzie do zarzÄ…dzania notatkami
 Name:		knowit
 Version:	0.10
 Release:	0.%{_beta}.5
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KnowIt is a tool for managing notes.
 
-%description -l pl
-KnowIt to rozbudowane narzêdzie do zarz±dzania notatkami.
+%description -l pl.UTF-8
+KnowIt to rozbudowane narzÄ™dzie do zarzÄ…dzania notatkami.
 
 %prep
 %setup -q -n %{name}-%{_ver}
