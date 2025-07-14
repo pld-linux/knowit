@@ -29,7 +29,7 @@ KnowIt to rozbudowane narzędzie do zarządzania notatkami.
 
 %prep
 %setup -q -n %{name}-%{_ver}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
